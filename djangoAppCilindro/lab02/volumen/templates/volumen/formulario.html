@@ -1,0 +1,10 @@
+<form method="post" action="{% url 'calcular' %}">
+    {% csrf_token %}
+    <label for="altura">Ingrese el Altura:</label>
+    <input type="number" step="0.01" name="altura" required>
+    <br><br>
+    <label for="diametro">Ingrese el Diámetro:</label>
+    <input type="number" step="0.01" name="diametro" required>
+    <br><br>
+    <input type="submit" name="calcular" value="Calcular Volumen">
+</form>

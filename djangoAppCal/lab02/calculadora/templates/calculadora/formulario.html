@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+    <form method="POST" action="{% url 'resultado' %}">
+        {% csrf_token %}
+        <label>Primer número:</label>
+        <input type="number" name="num1" required><br><br>
+
+        <label>Segundo número:</label>
+        <input type="number" name="num2" required><br><br>
+
+        <label>Operación:</label>
+        <select name="operacion">
+            <option value="suma">Suma</option>
+            <option value="resta">Resta</option>
+            <option value="multiplicacion">Multiplicación</option>
+        </select><br><br>
+
+        <input type="submit" value="Calcular">
+    </form>
+</body>
+</html>
